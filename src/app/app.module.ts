@@ -13,6 +13,7 @@ import { NavAdminComponent } from './nav-admin/nav-admin.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { UserProductViewComponent } from './user-product-view/user-product-view.component';
 
 
 let myRoot:Routes=[
@@ -39,6 +40,10 @@ let myRoot:Routes=[
   {
     path:"search",
     component:SearchProductAdminComponent
+  },
+  {
+    path:"cardView",
+    component:UserProductViewComponent
   }
 
 ]
@@ -52,7 +57,8 @@ let myRoot:Routes=[
     AddProductComponent,
     ViewProductComponent,
     SearchProductAdminComponent,
-    NavAdminComponent
+    NavAdminComponent,
+    UserProductViewComponent
   ],
   imports: [
     BrowserModule,
