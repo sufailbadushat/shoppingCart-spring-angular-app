@@ -12,33 +12,33 @@
 
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label font-monospace  fw-bold">Name</label>
-                    <input type="text" placeholder="name" class="form-control">
+                    <input name="name" [(ngModel)]="name" type="text" placeholder="name" class="form-control">
                 </div>
 
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="" class="form-label font-monospace fw-bold">Address</label>
-                    <textarea name="" id="" cols="30" placeholder="address" rows="3" class="form-control"></textarea>
+                    <textarea name="address" [(ngModel)]="address" name="" id="" cols="30" placeholder="address" rows="3" class="form-control"></textarea>
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label font-monospace fw-bold">Phone Number</label>
-                    <input type="text" placeholder="phone number" class="form-control">
+                    <input name="phoneNumber" [(ngModel)]="phoneNumber" type="text" placeholder="phone number" class="form-control">
                 </div>
               
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label font-monospace fw-bold">Email Id</label>
-                    <input type="text" placeholder="email id" class="form-control">
+                    <input name="emailId" [(ngModel)]="emailId" type="text" placeholder="email id" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label font-monospace fw-bold">Password</label>
-                    <input type="text" placeholder="password" class="form-control">
+                    <input name="password" [(ngModel)]="password" type="text" placeholder="password" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label font-monospace fw-bold">Confirm Password</label>
-                    <input type="text" placeholder="confirm password" class="form-control">
+                    <input name="cPassword" [(ngModel)]="cPassword" type="text" placeholder="confirm password" class="form-control">
                 </div>
 
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-lg-12 col-xl-12 col-xxl-12 text-center mt-5">
-                    <button class="btn btn-dark fw-bold font-monospace py-1">Register</button>
+                    <button (click)="readValue()" class="btn btn-dark fw-bold font-monospace py-1">Register</button>
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
                     <a routerLink="" class="font-monospace fw-bold" routerLink="/userLogin">Backto user login</a>
