@@ -12,6 +12,7 @@ import { SearchProductAdminComponent } from './search-product-admin/search-produ
 import { NavAdminComponent } from './nav-admin/nav-admin.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 let myRoot:Routes=[
@@ -57,7 +58,9 @@ let myRoot:Routes=[
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(myRoot),
-    FormsModule
+    FormsModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

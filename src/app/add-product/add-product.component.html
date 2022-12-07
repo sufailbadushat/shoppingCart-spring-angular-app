@@ -11,28 +11,28 @@
                 
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6 ">
                     <label for="" class="form-label font-monospace fw-bold">Name</label>
-                    <input type="text" placeholder="title" class="form-control">
+                    <input name="name" [(ngModel)]="name" type="text" placeholder="title" class="form-control">
                 </div>
                 
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label font-monospace fw-bold">Image</label>
-                    <input type="url" class="form-control">
+                    <input name="image" [(ngModel)]="image" type="url" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label font-monospace fw-bold">Category</label>
-                    <input type="text" placeholder="category" class="form-control">
+                    <input name="category" [(ngModel)]="category" type="text" placeholder="category" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label font-monospace fw-bold">Price</label>
-                    <input type="number" placeholder="price" class="form-control">
+                    <input name="price" [(ngModel)]="price" type="number" placeholder="price" class="form-control">
                 </div>                
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="" class="form-label fw-bold font-monospace ">Description</label>
-                    <textarea id="" cols="30" rows="4" class="form-control" placeholder="description"></textarea>
+                    <textarea name="description" [(ngModel)]="description" id="" cols="30" rows="4" class="form-control" placeholder="description"></textarea>
 
                     
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-lg-12 col-xl-12 col-xxl-12 text-center mt-5">
-                    <button class="btn btn-dark fw-bold font-monospace py-1">Submit</button>
+                    <button (click)="readValue()" class="btn btn-dark fw-bold font-monospace py-1">Submit</button>
                 </div>
             </div>
         </div>
