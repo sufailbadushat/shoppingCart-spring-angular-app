@@ -9,6 +9,37 @@ import { UserRegisterComponent } from './user-register/user-register.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { ViewProductComponent } from './view-product/view-product.component';
 import { SearchProductAdminComponent } from './search-product-admin/search-product-admin.component';
+import { NavAdminComponent } from './nav-admin/nav-admin.component';
+import { RouterModule, Routes } from '@angular/router';
+
+
+let myRoot:Routes=[
+  {
+    path:"",
+    component:AdminLoginComponent
+  },
+  {
+    path:"userLogin",
+    component:UserLoginComponent
+  },
+  {
+    path:"userRegister",
+    component:UserRegisterComponent
+  },
+  {
+    path:"view",
+    component:ViewProductComponent
+  },
+  {
+    path:"add",
+    component:AddProductComponent
+  },
+  {
+    path:"search",
+    component:SearchProductAdminComponent
+  }
+
+]
 
 @NgModule({
   declarations: [
@@ -18,11 +49,13 @@ import { SearchProductAdminComponent } from './search-product-admin/search-produ
     UserRegisterComponent,
     AddProductComponent,
     ViewProductComponent,
-    SearchProductAdminComponent
+    SearchProductAdminComponent,
+    NavAdminComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(myRoot)
   ],
   providers: [],
   bootstrap: [AppComponent]
