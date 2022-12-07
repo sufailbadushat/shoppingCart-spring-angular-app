@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { UserProductViewComponent } from './user-product-view/user-product-view.component';
 import { UserNavBarComponent } from './user-nav-bar/user-nav-bar.component';
+import { UserProductSearchComponent } from './user-product-search/user-product-search.component';
 
 
 let myRoot:Routes=[
@@ -45,6 +46,10 @@ let myRoot:Routes=[
   {
     path:"cardView",
     component:UserProductViewComponent
+  },
+  {
+    path:"cardSearch",
+    component:UserProductSearchComponent
   }
 
 ]
@@ -60,7 +65,8 @@ let myRoot:Routes=[
     SearchProductAdminComponent,
     NavAdminComponent,
     UserProductViewComponent,
-    UserNavBarComponent
+    UserNavBarComponent,
+    UserProductSearchComponent
   ],
   imports: [
     BrowserModule,
