@@ -11,16 +11,16 @@
                     <div class="row g-3 mt-5 d-flex align-items-end flex-column ">
                         <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 ">
                             <label for="" class="form-label font-monospace fw-bold">Username</label>
-                            <input type="text" placeholder="username" id=""
+                            <input name="username" [(ngModel)]="username" type="text" placeholder="username" id=""
                                 class="form-control">
                         </div>
                         <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 ">
                             <label for="" class="form-label fw-bold font-monospace">Password</label>
-                            <input type="password" placeholder="password" id=""
+                            <input name="password" [(ngModel)]="password" type="password" placeholder="password" id=""
                                 class="form-control">
                         </div>
                         <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 text-center ">
-                            <button class="btn btn-dark font-monospace py-1 fw-bold">Login</button>
+                            <button (click)="readValue()" class="btn btn-dark font-monospace py-1 fw-bold">Login</button>
                         </div>
                         <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 text-center ">
                             <a routerLink="" class="font-monospace fw-bold" routerLink="userLogin" >user login</a>

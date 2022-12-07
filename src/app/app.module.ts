@@ -11,6 +11,7 @@ import { ViewProductComponent } from './view-product/view-product.component';
 import { SearchProductAdminComponent } from './search-product-admin/search-product-admin.component';
 import { NavAdminComponent } from './nav-admin/nav-admin.component';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 
 let myRoot:Routes=[
@@ -55,7 +56,8 @@ let myRoot:Routes=[
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(myRoot)
+    RouterModule.forRoot(myRoot),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
