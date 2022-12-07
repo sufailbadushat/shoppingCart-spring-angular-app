@@ -9,10 +9,10 @@
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 pt-5">
                     <label for="" class="form-label font-monospace fw-bold">Product Name</label>
-                    <input type="text" placeholder="product name" class="form-control">
+                    <input name="name" [(ngModel)]="name" type="text" placeholder="product name" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-                    <button class="btn btn-dark font-monospace fw-bold py-1">Search</button>
+                    <button (click)="readValue()" class="btn btn-dark font-monospace fw-bold py-1">Search</button>
                 </div>
 
 
@@ -20,75 +20,32 @@
 
         </div>
     </div>
-    
+
 </div>
 
 <div class="container">
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
             <div class="row g-3 mt-4">
-                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
-                    <div class="card" >
-                        <img height="300px" src="https://m.media-amazon.com/images/I/61bK6PMOC3L._SX522_.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title font-monospace fw-bold">I Phone 14 pro</h5>
-                            <p class="card-text font-monospace">Apple i phone</p>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3"  *ngFor="let j of searchValue">
+                    <div class="card">
+                        <img height="300px" src={{j.image}}
+                            class="card-img-top" alt="...">
+                        <div class="card-body" style="height: 100px;">
+                            <h5 class="card-title font-monospace fw-bold">{{j.name}}</h5>
+                            <p class="card-text font-monospace">{{j.description}}</p>
                         </div>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item font-monospace fw-bold">category:phone</li>
-                            <li class="list-group-item fw-bold font-monospace">₹50000</li>
-                          <button class="btn btn-dark my-3 mx-2 font-monospace fw-bold">Buy Now</button>
+                            <li class="list-group-item font-monospace fw-bold">category:{{j.category}}</li>
+                            <li class="list-group-item fw-bold font-monospace">₹{{j.price}}</li>
+                            <button class="btn btn-dark my-3 mx-2 font-monospace fw-bold">Buy Now</button>
                         </ul>
-                       
-                      </div>
+
+                    </div>
                 </div>
-                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
-                    <div class="card" >
-                        <img height="300px" src="https://m.media-amazon.com/images/I/61bK6PMOC3L._SX522_.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title font-monospace fw-bold">I Phone 14 pro</h5>
-                            <p class="card-text font-monospace">Apple i phone</p>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item font-monospace fw-bold">category:phone</li>
-                            <li class="list-group-item fw-bold font-monospace">₹50000</li>
-                          <button class="btn btn-dark my-3 mx-2 font-monospace fw-bold">Buy Now</button>
-                        </ul>
-                       
-                      </div>
-                </div>
-                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
-                    <div class="card" >
-                        <img height="300px" src="https://m.media-amazon.com/images/I/61bK6PMOC3L._SX522_.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title font-monospace fw-bold">I Phone 14 pro</h5>
-                            <p class="card-text font-monospace">Apple i phone</p>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item font-monospace fw-bold">category:phone</li>
-                            <li class="list-group-item fw-bold font-monospace">₹50000</li>
-                          <button class="btn btn-dark my-3 mx-2 font-monospace fw-bold">Buy Now</button>
-                        </ul>
-                       
-                      </div>
-                </div>
-                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
-                    <div class="card" >
-                        <img height="300px" src="https://m.media-amazon.com/images/I/61bK6PMOC3L._SX522_.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title font-monospace fw-bold">I Phone 14 pro</h5>
-                            <p class="card-text font-monospace">Apple i phone</p>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item font-monospace fw-bold">category:phone</li>
-                            <li class="list-group-item fw-bold font-monospace">₹50000</li>
-                          <button class="btn btn-dark my-3 mx-2 font-monospace fw-bold">Buy Now</button>
-                        </ul>
-                       
-                      </div>
-                </div>
+
             </div>
         </div>
-        
+
     </div>
 </div>
