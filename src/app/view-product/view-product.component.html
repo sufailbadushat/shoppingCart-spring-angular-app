@@ -1,4 +1,3 @@
-
 <app-nav-admin></app-nav-admin>
 
 <div style="background-color:rgba(113, 29, 146, 0.697);">
@@ -9,8 +8,8 @@
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mt-4">
                     <h2 class="text-center font-monospace fw-bold my-5">All Product Details</h2>
                 </div>
-                <table class="table  font-monospace  ">
-                    <thead class="bg-light">
+                <table class="table table-info font-monospace table-hover  table-bordered ">
+                    <thead class="bg-secondary table-secondary">
                         <tr>
                             <th scope="col">Product Name</th>
                             <th scope="col">Category</th>
@@ -20,20 +19,18 @@
 
                         </tr>
                     </thead>
-                    <tbody>
-                       
-                        <tr><td>TEST</td>
-                            <td>TEST</td>
-                            <td>TEST</td>
-                            <td>TEST</td><td>TEST</td></tr>
-                       
+                    <tbody class="bg-light ">
                         
+                        <tr *ngFor="let i of product">
 
+                            <th scope="row">{{i.name}}</th>
+                            <td>{{i.category}}</td>
+                            <td>{{i.description}}</td>
+                            <td>{{i.price}}</td>
+                            <td ><a href={{i.image}}>{{i.image}}</a></td>
+                            
 
-
-
-
-
+                        </tr>
 
                     </tbody>
                 </table>

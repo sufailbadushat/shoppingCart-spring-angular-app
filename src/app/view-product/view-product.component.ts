@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-view-product',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./view-product.component.css']
 })
 export class ViewProductComponent {
-
+  constructor(private api:ApiService){
+    api.fetchProduct().subscribe(
+      (response)=>{
+        this.product=response
+      }
+    )
+  }
+  product:any={}
 }
