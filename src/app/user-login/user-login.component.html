@@ -9,16 +9,16 @@
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 mt-5">
                     <label for="" class="form-label font-monospace fw-bold">Email Id</label>
-                    <input type="text" placeholder="email id"
+                    <input name="emailId" [(ngModel)]="emailId" type="text" placeholder="email id"
                         class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label font-monospace fw-bold ">Password</label>
-                    <input type="text" placeholder="password"
+                    <input name="password" [(ngModel)]="password" type="text" placeholder="password"
                         class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-                    <button class="btn btn-dark fw-bold font-monospace py-1 " routerLink="/cardView">Login</button>
+                    <button class="btn btn-dark fw-bold font-monospace py-1 " (click)="readValues()">Login</button>
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
                     <a class="font-monospace fw-bold" routerLink="/userRegister">New user?, Register
